@@ -1,0 +1,42 @@
+<h3>heros list</h3>
+
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <h3>hero deleted <small class="text-danger"> {{deletedHero}} </small></h3>
+</div>
+
+<!-- local reference -->
+<ng-template #nothingWasDeleted>
+  <h3 *ngIf="!deletedHero" > No ha borrado nada</h3>
+</ng-template>
+
+<button
+*ngIf="heroes.length > 0"
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger">
+  Delete last hero
+</button>
+
+
+<ul class="mt-2 list-group">
+<li
+ *ngFor="let name of heroes"
+class="list-group-item">
+<strong>{{name}}</strong>
+</li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <li class="list-group-item">Iron</li>
+<li class="list-group-item">hulk</li>
+<li class="list-group-item">thor</li> -->

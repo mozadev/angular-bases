@@ -1,0 +1,37 @@
+<h1> Spiderman</h1>
+
+<dl>
+  <td>Nombre: </td>
+  <dd>  {{name}} </dd>
+
+
+  <td>Edad: </td>
+  <dd> {{edad}} </dd>
+
+  <td>Metodo: </td>
+  <dd>  {{ getHeroDescription() }} </dd>
+
+  <td>Capitalizado: </td>
+  <dd>  {{capitalizedName}}</dd>
+
+</dl>
+
+<button
+*ngIf="name === 'ironman'"
+ (click)="changeHero()"
+ class="btn btn-primary mx-2">
+  Cambiar hero
+</button>
+
+<button
+*ngIf="edad !== 25"
+ (click)="changeAge()"
+  class="btn btn-primary mx-2">
+  change edad
+</button>
+
+<button
+ (click)="reset()"
+  class="btn btn-primary mx-2">
+  Reset
+</button>
