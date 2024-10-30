@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -8,11 +8,14 @@ import { Character } from '../../interfaces/character.interface';
     styleUrls: ['./list.component.css'],
 })
 export class ListComponent {
+
+    // to get a property called characterList from father (main-page-component) if you don't define inside ()
+    @Input() 
     public characterList: Character[]= [
-        {
-            name:'Trunk',
-            power: 10
-        }
+        // {
+        //     name:'Trunk',
+        //     power: 10
+        // }
     ]
  }
 
