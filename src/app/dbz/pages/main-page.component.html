@@ -2,11 +2,12 @@
 <hr>
 <div class="row">
     <div class="col">
-        <dbz-list [characterList]="characters"></dbz-list>
+        <!-- on delete -->
+        <dbz-list [characterList]="characters"
+       (onDelete)="onDeleteCharacter($event)"></dbz-list>
     </div>
 
     <div class="col">
-        <!-- {{characters}} -->
         <!--add characters-->
         <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
 
